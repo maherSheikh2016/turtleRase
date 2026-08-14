@@ -1,8 +1,5 @@
-!pip install ColabTurtlePlus
-import ColabTurtlePlus.Turtle as turtle
 
-import ColabTurtlePlus.Turtle as turtle
-
+import turtle
 # Crear la ventana
 pantalla = turtle.Screen()
 pantalla.bgcolor("white")
@@ -78,3 +75,5 @@ for i in range(12):
   t3.forward(25)
   t1.forward(4.1)
   t4.forward(10)
+
+  turtle.done()
