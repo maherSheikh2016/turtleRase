@@ -69,7 +69,7 @@ t4.goto(-300,-100)
 # Crear la tortuga 5
 t5 = turtle.Turtle()
 t5.shape("turtle")
-t5.color("orange")
+t5.color("yellow")
 t5.pensize(4)
 t5.speed(13)
 t5.clear()
@@ -103,7 +103,7 @@ tortugas = {
     t2: "Tortuga Roja",
     t3: "Tortuga Verde",
     t4: "Tortuga Negra",
-    t5: "Tortuga Naranja"
+    t5: "Tortuga Amarilla"
 }
 winner = None
 
