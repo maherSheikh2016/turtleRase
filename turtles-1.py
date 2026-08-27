@@ -1,19 +1,23 @@
 import random
 import tkinter as tk
 import turtle
+import time
 
 # Crear la ventana
 pantalla = turtle.Screen()
-pantalla.bgcolor("white")
+pantalla.colormode(255)
+pantalla.bgcolor(144, 238, 144)
 
 #dibujar la meta
 meta = turtle.Turtle()
 meta.shape("square")
 meta.color("black")
 meta.penup()
-meta.goto(300, 250)
+meta.goto(320, 250)
+meta.pensize(5)
 meta.pendown()
-meta.goto(300, -250)
+meta.goto(320, -250)
+meta.hideturtle()
 
 # Crear la tortuga 1
 t1 = turtle.Turtle()
@@ -64,6 +68,20 @@ t5.speed(13)
 t5.clear()
 t5.penup()
 t5.goto(-300,-200)
+
+#semaforo
+semaforo = turtle.Turtle()
+semaforo.shape("circle")
+colors = ["red", "yellow", "green"]
+position = 200
+semaforo.penup()
+for color in colors:
+  semaforo.color(color)
+  semaforo.goto(0, position)
+  position -= 50
+  time.sleep(1)
+
+semaforo.hideturtle()
 
 # reajustar velosidad
 t1.speed(4)
