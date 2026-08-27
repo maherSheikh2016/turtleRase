@@ -1,4 +1,4 @@
-from main import start_race
+from race import start_race
 
 
 if __name__ == "__main__":
