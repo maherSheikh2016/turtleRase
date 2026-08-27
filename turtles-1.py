@@ -1,9 +1,19 @@
+import random
 import tkinter as tk
 import turtle
+
 # Crear la ventana
 pantalla = turtle.Screen()
 pantalla.bgcolor("white")
-turtle.clearscreen()
+
+#dibujar la meta
+meta = turtle.Turtle()
+meta.shape("square")
+meta.color("black")
+meta.penup()
+meta.goto(300, 250)
+meta.pendown()
+meta.goto(300, -250)
 
 # Crear la tortuga 1
 t1 = turtle.Turtle()
@@ -63,17 +73,22 @@ t4.speed(3)
 t5.speed(6)
 
 # Carrera
-for i in range(25):
-  t1.forward(15)
-  t2.forward(10)
-  t3.forward(5)
-  t4.forward(12)
-  t5.forward(17)
+tortugas = {
+    t1: "Tortuga Azul", 
+    t2: "Tortuga Roja",
+    t3: "Tortuga Verde",
+    t4: "Tortuga Negra",
+    t5: "Tortuga Naranja"
+}
+winner = None
 
-for j in range(12):
-  t2.forward(14.58)
-  t3.forward(25)
-  t1.forward(4.1)
-  t4.forward(10.4)
-
+while not winner:
+    for keys, values in tortugas.items():
+        keys.forward(random.randint(1, 10))
+        if keys.xcor() >= 300:
+            winner = values
+            root = tk.Tk()
+            label = tk.Label(root, text=f"¡La {winner} ha ganado la carrera!")
+            label.pack()
+            break
 turtle.done()
