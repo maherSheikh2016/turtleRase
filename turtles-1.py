@@ -1,4 +1,4 @@
-
+import tkinter as tk
 import turtle
 # Crear la ventana
 pantalla = turtle.Screen()
@@ -56,11 +56,11 @@ t5.penup()
 t5.goto(-300,-200)
 
 # reajustar velosidad
-t1.speed(5)
-t2.speed(3)
+t1.speed(4)
+t2.speed(2)
 t3.speed(1)
-t4.speed(4)
-t5.speed(7)
+t4.speed(3)
+t5.speed(6)
 
 # Carrera
 for i in range(25):
@@ -70,10 +70,10 @@ for i in range(25):
   t4.forward(12)
   t5.forward(17)
 
-for i in range(12):
-  t2.forward(14.5)
+for j in range(12):
+  t2.forward(14.58)
   t3.forward(25)
   t1.forward(4.1)
-  t4.forward(10)
+  t4.forward(10.4)
 
-  turtle.done()
+turtle.done()
